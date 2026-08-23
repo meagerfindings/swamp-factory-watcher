@@ -1,0 +1,22 @@
+{
+  "extension": "@mgreten/factory-watcher",
+  "version": "2026.08.23.1",
+  "reviewedAt": "2026-08-23T16:00:00Z",
+  "dimensions": [
+    { "id": "credentials-secrets", "verdict": "na", "note": "No credentials or providers." },
+    { "id": "logging-quality", "verdict": "pass", "note": "watch logs structured entry and completion events without input evidence." },
+    { "id": "error-handling", "verdict": "pass", "note": "Strict parsing, temporal provenance, freshness, availability, and request binding fail before the single write." },
+    { "id": "testing-completeness", "verdict": "pass", "note": "Synthetic tests cover transition grouping, chronological offset ordering, deterministic replay, truncation, stale and future-collected evidence, malformed fields and references, authority, persistence, and request binding." },
+    { "id": "idempotency-resilience", "verdict": "pass", "note": "Pure analysis is deterministic and the request-bound instance name makes replay overwrite the same logical resource." },
+    { "id": "api-contracts", "verdict": "na", "note": "No external API calls." },
+    { "id": "resource-management", "verdict": "na", "note": "No external resources or handles." },
+    { "id": "published-surface-hygiene", "verdict": "pass", "note": "Documentation and fixtures contain synthetic identifiers only." },
+    { "id": "schema-strictness", "verdict": "pass", "note": "Argument, input, output, source-reference, and all nested object schemas are strict; malformed unknown fields are tested." },
+    { "id": "lifetime-gc", "verdict": "pass", "note": "The sole watch resource declares infinite lifetime and retention of ten versions." },
+    { "id": "crud-completeness", "verdict": "na", "note": "This is a decision-only analyzer, not a CRUD lifecycle model." },
+    { "id": "preflight-checks", "verdict": "na", "note": "No provider or factory mutation is exposed." },
+    { "id": "instance-names", "verdict": "pass", "note": "The sole write uses a validated requestId bound exactly to watchId." },
+    { "id": "data-access", "verdict": "na", "note": "No stored state is read." },
+    { "id": "version-upgrades", "verdict": "na", "note": "Initial unpublished version." }
+  ]
+}
